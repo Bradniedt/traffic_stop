@@ -1,9 +1,15 @@
+require './lib/driver'
 class Vehicle
-  attr_reader :year, :make, :model, :driver
-  def initialize(year, make, model, driver = nil)
+  attr_reader :year, :make, :model
+  attr_accessor :driver
+  def initialize(year, make, model)
     @year = year
     @make = make
     @model = model
-    @driver = driver
+    @driver = nil
   end
+
+  def add_driver(driver)
+    @driver = driver
+  end 
 end
