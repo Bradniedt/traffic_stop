@@ -45,4 +45,10 @@ class VehicleTest < Minitest::Test
     vehicle = Vehicle.new('2001', 'Honda', 'Civic')
     refute vehicle.speeding?
   end
+
+  def test_it_can_speed
+    vehicle = Vehicle.new('2001', 'Honda', 'Civic')
+    vehicle.speed
+    assert vehicle.speeding? 
+  end
 end
