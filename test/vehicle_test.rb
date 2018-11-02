@@ -23,4 +23,9 @@ class VehicleTest < Minitest::Test
     vehicle = Vehicle.new('2001', 'Honda', 'Civic')
     assert_equal 'Civic', vehicle.model
   end
+
+  def test_it_has_no_driver_by_default
+    vehicle = Vehicle.new('2001', 'Honda', 'Civic')
+    assert_equal nil, vehicle.driver
+  end
 end
