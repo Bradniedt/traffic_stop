@@ -28,4 +28,11 @@ class VehicleTest < Minitest::Test
     vehicle = Vehicle.new('2001', 'Honda', 'Civic')
     assert_nil vehicle.driver
   end
+
+  def test_it_can_have_a_driver
+    driver = Driver.new('Bob')
+    vehicle = Vehicle.new('2001', 'Honda', 'Civic')
+    vehicle.add_driver(driver)
+    assert_equal driver, vehicle.driver
+  end
 end
