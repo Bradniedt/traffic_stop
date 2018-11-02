@@ -35,4 +35,9 @@ class VehicleTest < Minitest::Test
     vehicle.add_driver(driver)
     assert_equal driver, vehicle.driver
   end
+
+  def test_if_it_can_check_if_it_is_speeding
+    vehicle = Vehicle.new('2001', 'Honda', 'Civic')
+    refute vehicle.speeding?
+  end
 end
