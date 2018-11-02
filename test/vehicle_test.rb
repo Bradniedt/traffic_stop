@@ -11,6 +11,16 @@ class VehicleTest < Minitest::Test
 
   def test_it_has_a_year
     vehicle = Vehicle.new('2001', 'Honda', 'Civic')
-    assert_equal '2001', vehicle.year 
+    assert_equal '2001', vehicle.year
+  end
+
+  def test_it_has_a_make
+    vehicle = Vehicle.new('2001', 'Honda', 'Civic')
+    assert_equal 'Honda', vehicle.make
+  end
+
+  def test_it_has_a_year
+    vehicle = Vehicle.new('2001', 'Honda', 'Civic')
+    assert_equal 'Civic', vehicle.model
   end
 end
