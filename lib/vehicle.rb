@@ -1,7 +1,7 @@
 require './lib/driver'
 class Vehicle
-  attr_reader :year, :make, :model, :speed_status
-  attr_accessor :driver
+  attr_reader :year, :make, :model
+  attr_accessor :driver, :speed_status
   def initialize(year, make, model)
     @year = year
     @make = make
@@ -18,4 +18,7 @@ class Vehicle
     @speed_status
   end
 
+  def speed
+    @speed_status = true 
+  end
 end
